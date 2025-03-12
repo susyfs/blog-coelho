@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog do Orelhudo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .header {
+            background-color: #a3d39c;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .content {
+            padding: 20px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .image {
+            width: 80%;
+            max-width: 600px;
+            margin: 10px 0;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .footer {
+            margin-top: 20px;
+            background-color: #a3d39c;
+            padding: 10px;
+        }
+        .footer a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>🐰 Bem-vindo ao Blog do Orelhudo 🐰</h1>
+    </header>
+    <main class="content">
+        <section class="section">
+            <h2>Orelhudo se divertindo!</h2>
+            <img class="image" id="imgCorrendo" src="images/oreludo_correndo.jpg" alt="Orelhudo correndo">
+        </section>
+        <section class="section">
+            <h2>Hora de comer feno!</h2>
+            <img class="image" id="imgComendo" src="imagens/" alt="Orelhudo comendo feno">
+        </section>
+        <section class="section">
+            <h2>Orelhudo brincando!</h2>
+            <img class="image" id="imgBrincando" src="images/oreludo_brincando.jpg" alt="Orelhudo brincando">
+        </section>
+    </main>
+    <footer class="footer">
+        <p>🐇 Quer garantir a melhor alimentação para seu coelho? 🥕</p>
+        <a href="https://www.petshopexemplo.com/racao-recomendada" target="_blank">Compre aqui a ração recomendada!</a>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const imagens = document.querySelectorAll(".image");
+            imagens.forEach(img => {
+                img.addEventListener("mouseover", function() {
+                    this.style.transform = "scale(1.1)";
+                    this.style.transition = "transform 0.3s";
+                });
+                img.addEventListener("mouseout", function() {
+                    this.style.transform = "scale(1)";
+                });
+            });
+        });
+    </script>
+</body>
+</html>
