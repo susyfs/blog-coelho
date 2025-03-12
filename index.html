@@ -17,12 +17,46 @@
             padding: 20px;
             font-size: 24px;
             font-weight: bold;
+            position: relative;
+        }
+        .logo {
+            width: 50px;
+            height: 50px;
+            background: url('logo-do-oreludo.png') no-repeat center center;
+            background-size: contain;
+            position: absolute;
+            left: 20px;
+            top: 20px;
+        }
+        .intro {
+            margin-top: 40px;
+            font-size: 20px;
+            font-weight: 300;
+            color: #555;
+            line-height: 1.6;
+            max-width: 80%;
+            margin: 0 auto;
+        }
+        .btn-menu {
+            display: inline-block;
+            background-color: #8bc34a;
+            color: white;
+            padding: 10px 20px;
+            margin-top: 20px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .btn-menu:hover {
+            background-color: #7a9f3b;
         }
         .content {
             padding: 20px;
         }
         .section {
-            margin-bottom: 20px;
+            margin-bottom: 40px;
         }
         .image {
             width: 80%;
@@ -30,9 +64,13 @@
             margin: 10px 0;
             border-radius: 10px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .image:hover {
+            transform: scale(1.05);
         }
         .footer {
-            margin-top: 20px;
+            margin-top: 40px;
             background-color: #a3d39c;
             padding: 10px;
         }
@@ -45,27 +83,38 @@
 </head>
 <body>
     <header class="header">
+        <div class="logo"></div>
         <h1>🐰 Bem-vindo ao Blog do Orelhudo 🐰</h1>
     </header>
+    
+    <section class="intro">
+        <h2>Os coelhos são animais lindos, mas precisam de cuidados especiais.</h2>
+        <p>Se você tem ou deseja adotar um coelho, é importante saber como garantir que ele tenha uma vida saudável e feliz. Neste blog, vamos compartilhar dicas de alimentação, brincadeiras, e cuidados gerais para manter o seu amigo peludo sempre saudável e divertido!</p>
+        <a href="#menu" class="btn-menu">Veja as dicas para o seu coelho!</a>
+    </section>
+
     <main class="content">
-        <section class="section">
+        <section class="section" id="alimentacao">
             <h2>Orelhudo se divertindo!</h2>
-            <img class="image" id="imgCorrendo" src="imagens/imagem1.jpg" alt="Orelhudo correndo">
+            <img class="image" src="imagens/imagem1.jpg" alt="Orelhudo correndo">
         </section>
-        <section class="section">
+        <section class="section" id="alimentacao">
             <h2>Hora de comer feno!</h2>
-            <img class="image" id="imgComendo" src="imagens/imagem2.jpg" alt="Orelhudo comendo feno">
+            <img class="image" src="imagens/imagem2.jpg" alt="Orelhudo comendo feno">
         </section>
-        <section class="section">
+        <section class="section" id="brincadeiras">
             <h2>Orelhudo brincando!</h2>
-            <img class="image" id="imgBrincando" src="imagens/imagem3.jpg" alt="Orelhudo brincando">
+            <img class="image" src="imagens/imagem3.jpg" alt="Orelhudo brincando">
         </section>
     </main>
+
     <footer class="footer">
         <p>🐇 Quer garantir a melhor alimentação para seu coelho? 🥕</p>
-        <a href="https://www.https://www.petz.com.br//racao-recomendada" target="_blank">Compre aqui a ração recomendada!</a>
+        <a href="https://www.petz.com.br/racao-recomendada" target="_blank">Compre aqui a ração recomendada!</a>
     </footer>
+
     <script>
+        // Esse script pode ser usado para adicionar interatividade
         document.addEventListener("DOMContentLoaded", function() {
             const imagens = document.querySelectorAll(".image");
             imagens.forEach(img => {
