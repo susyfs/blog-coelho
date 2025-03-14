@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog do Orelhudo</title>
+    <title>Blog do Orelhudo - Produtos</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -17,7 +17,6 @@
             padding: 20px;
             font-size: 24px;
             font-weight: bold;
-            position: relative;
         }
         .logo {
             width: 50px;
@@ -52,22 +51,39 @@
         .btn-menu:hover {
             background-color: #7a9f3b;
         }
-        .content {
+        .products-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
             padding: 20px;
         }
-        .section {
-            margin-bottom: 40px;
-        }
-        .image {
-            width: 80%;
-            max-width: 600px;
-            margin: 10px 0;
+        .product {
+            background-color: white;
             border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            padding: 15px;
+            text-align: center;
             transition: transform 0.3s;
         }
-        .image:hover {
+        .product:hover {
             transform: scale(1.05);
+        }
+        .product img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        .product h3 {
+            margin-top: 10px;
+            font-size: 18px;
+            color: #333;
+        }
+        .product p {
+            color: #777;
+            font-size: 14px;
         }
         .footer {
             margin-top: 40px;
@@ -86,47 +102,20 @@
         <div class="logo"></div>
         <h1>🐰 Bem-vindo ao Blog do Orelhudo 🐰</h1>
     </header>
-    
+
     <section class="intro">
-        <h2>Os coelhos são animais lindos, mas precisam de cuidados especiais.</h2>
-        <p>Se você tem ou deseja adotar um coelho, é importante saber como garantir que ele tenha uma vida saudável e feliz. Neste blog, vamos compartilhar dicas de alimentação, brincadeiras, e cuidados gerais para manter o seu amigo peludo sempre saudável e divertido!</p>
-        <a href="#menu" class="btn-menu">Veja as dicas para o seu coelho!</a>
+        <h2>Encontre os melhores produtos para o seu coelho!</h2>
+        <p>Confira a nossa seleção especial de itens para garantir que o seu amigo orelhudo tenha uma vida saudável e feliz!</p>
     </section>
 
-    <main class="content">
-        <section class="section" id="alimentacao">
-            <h2>Orelhudo se divertindo!</h2>
-            <img class="image" src="imagens/imagem1.jpg" alt="Orelhudo correndo">
-        </section>
-        <section class="section" id="alimentacao">
-            <h2>Hora de comer feno!</h2>
-            <img class="image" src="imagens/imagem2.jpg" alt="Orelhudo comendo feno">
-        </section>
-        <section class="section" id="brincadeiras">
-            <h2>Orelhudo brincando!</h2>
-            <img class="image" src="imagens/imagem3.jpg" alt="Orelhudo brincando">
-        </section>
-    </main>
-
-    <footer class="footer">
-        <p>🐇 Quer garantir a melhor alimentação para seu coelho? 🥕</p>
-        <a href="https://www.petz.com.br/racao-recomendada" target="_blank">Compre aqui a ração recomendada!</a>
-    </footer>
-
-    <script>
-        // Esse script pode ser usado para adicionar interatividade
-        document.addEventListener("DOMContentLoaded", function() {
-            const imagens = document.querySelectorAll(".image");
-            imagens.forEach(img => {
-                img.addEventListener("mouseover", function() {
-                    this.style.transform = "scale(1.1)";
-                    this.style.transition = "transform 0.3s";
-                });
-                img.addEventListener("mouseout", function() {
-                    this.style.transform = "scale(1)";
-                });
-            });
-        });
-    </script>
-</body>
-</html>
+    <section class="products-section">
+        <!-- Produto 1: Ração -->
+        <div class="product">
+            <img src="imagens/racao.jpg" alt="Ração para coelho">
+            <h3>Ração para Coelho</h3>
+            <p>Ração nutritiva e deliciosa para o seu coelho. Garantia de saúde e energia!</p>
+            <a href="https://www.exemplo.com/racao" class="btn-menu">Comprar</a>
+        </div>
+        <!-- Produto 2: Feno -->
+        <div class="product">
+            <img src="imagens/feno.jpg"
